@@ -1,12 +1,12 @@
 <h1 align="center">Sistema de Gerenciamento de Pedidos em Python</h1>
 
 
-`"Descrição"` - Este é um sistema simples de gerenciamento de pedidos desenvolvido em Python. O objetivo principal é fornecer uma aplicação fácil de usar para gerenciar pedidos em um ambiente de negócios.
+`Descrição` - Este é um sistema simples de gerenciamento de pedidos desenvolvido em Python. O objetivo principal é fornecer uma aplicação fácil de usar para gerenciar pedidos em um ambiente de negócios.
 
 ## Funcionalidades
-+ 1. Cadastro de Produtos: Adicione produtos ao sistema, incluindo detalhes como nome, descrição e preço.
-+ 2. Realização de Pedidos: Crie novos pedidos, associando clientes e produtos, e registre informações como quantidade e data.
-+ 3. Consulta de Pedidos: Visualize pedidos existentes, filtre por cliente ou data, e obtenha informações detalhadas sobre cada transação.
+1. Cadastro de Produtos: Adicione produtos ao sistema, incluindo detalhes como nome, descrição e preço.
+2. Realização de Pedidos: Crie novos pedidos, associando clientes e produtos, e registre informações como quantidade e data.
+3. Consulta de Pedidos: Visualize pedidos existentes, filtre por cliente ou data, e obtenha informações detalhadas sobre cada transação.
 
 ## Requisitos
 + [Python 3](https://docs.python.org/3/index.html)
@@ -22,7 +22,7 @@
 ## Projeto Interdisciplinar
 > Esse projeto foi requisitado pelas disciplinas de Estrutura de Dados, Protocolos de Interconexão de Redes de Computadores e Sistemas Operacionais do IFPB (2023.2), ministrada pelos Profº Alex Sandro, Prof° Leonidas Lima e Profº Gustavo Wagner, com o objetivo de implementar os conhecimentos adquiridos nas três disciplinas. Veja o arquivo [Especificações do projeto](https://docs.google.com/document/d/1z6RtA2er4ap2CmnEZaI3qCE_yKTS8TWkFFeoYK7zhYg/edit?pli=1) para conferir os detalhes.
 
-## Descrição dos arquivos:
+## Arquivos:
 | Nome | Descrição |
 | ------ | ----------- |
 | main.py | Este é o arquivo principal onde o sistema é carregado.|
