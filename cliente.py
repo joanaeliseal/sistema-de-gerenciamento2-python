@@ -15,19 +15,21 @@ elif len(sys.argv) == 3:
     SERVIDOR_PORTA = int(sys.argv[2])
 
 CODIGOS_SERVIDOR = {
-    '200': 'Pedido registrado com sucesso!',
-    '201': 'Pedido encontrado com sucesso!',
-    '202': 'Item adicionado ao pedido!',
-    '203': 'Itens disponíveis listados.',
-    '204': 'Pedido finalizado com sucesso!',
-    '205': 'Cardápio esgotado.',
-    '206': 'Ainda há itens disponíveis.',
-    '207': 'Pedido entregue com sucesso!',
-    '208': 'Itens no pedido até agora.',
-    '400': 'Item inválido.',
-    '401': 'Item não está disponível!',
-    '402': 'Ainda não é possível entregar o pedido.'
+    '200': 'Pedido encontrado com sucesso!', # resposta padrão
+    '201': 'Pedido criado com sucesso!', # criado
+    '202': 'Item adicionado ao pedido!', # aceito
+    '203': 'Item indisponível.', # não autorizado
+    '204': 'Cardápio esgotado!', # nenhum conteudo
+    '205': 'Faça uma nova solicitação.', # resetar conteudo ###
+    '206': 'Ainda há itens disponíveis.', # conteudo parcial 
+    '207': 'Pedido entregue com sucesso!', # recurso entregue com sucesso
+    '208': 'O pedido contém os seguintes itens.', ###
+    '400': 'Item inválido.', # erro do cliente 
+    '401': 'Item não está disponível!', # não autorizado
+    '402': 'Ainda não é possível entregar o pedido.' # pagamento necessário
 }
+
+
 
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear') # função para limpar tela do console
@@ -72,8 +74,8 @@ def main():
         elif choice == '4':
             limpar_tela()
             resposta = enviar_mensagem(f"ENTREGAR_PEDIDO")
-            if resposta == "402":
-                print(CODIGOS_SERVIDOR['402'])
+            if resposta == "207":
+                print(CODIGOS_SERVIDOR['207'])
             else:
                 _, entrega = resposta.split("-", 1)
                 print(f'\nEntrega realizada!\n\nItens entregues: {entrega}\n')
@@ -93,13 +95,13 @@ def main():
 
 def adicionar_item_pedido(enviar_mensagem):
     codigo, resposta = enviar_mensagem("DISPONIVEIS").split("-", 1)
-    if codigo == "203":
+    if codigo == "206":
         print("Itens disponíveis: " + resposta)
     item = input_item()
     if item != '':
         codigo = enviar_mensagem(f"ADICIONAR_ITEM {item}")
         print(CODIGOS_SERVIDOR[codigo])
-        if codigo == "202":
+        if codigo == "401":
             cardapio_esgotado(enviar_mensagem(f"ESGOTOU"))
     else:
         print('Item inválido')
