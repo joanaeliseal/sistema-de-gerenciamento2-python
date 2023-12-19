@@ -1,5 +1,3 @@
-from FilaSequencialCircularNumPy import Fila
-
 class ListaException(Exception):
     """Classe de exceção lançada quando uma violação de ordem genérica
        da lista é identificada.
@@ -10,6 +8,8 @@ class ListaException(Exception):
             embutir na exceção
         """
         super().__init__(msg)
+
+
 
 class Node:
     '''
@@ -41,10 +41,13 @@ class Node:
     def __str__(self):
         return str(self.__data)
 
+   
+	    
+'''
+Esta classe implementa uma estrutura Lista Simplesmente Encadeada
+'''
 class Lista:
-    '''
-    Esta classe implementa uma estrutura Lista Simplesmente Encadeada. Inicia vazia.
-    '''
+    # constructor initializes an empty linkd list
     def __init__(self):
         self.__head = None
         self.__tamanho = 0
@@ -71,7 +74,10 @@ class Lista:
         except AssertionError as ae:
             raise ListaException(ae)
 
+
+
     def modificar(self, posicao:int, carga: any):
+ 
         try:
             assert posicao > 0, f'A posicao não pode ser 0 (zero) ou um número negativo'
             assert posicao <= len(self), f'Posicao invalida. Lista contém {self.__tamanho} elementos'
@@ -89,7 +95,8 @@ class Lista:
         except AssertionError as ae:
             raise ListaException(ae.__str__())
    
-    def busca(self, valor, chave:any)->int:
+    
+    def busca(self, chave:any)->int:
         if (self.estaVazia()):
             raise ListaException(f'Lista vazia')
 
@@ -142,6 +149,8 @@ class Lista:
         except AssertionError:
             raise ListaException(f'A posicao não pode ser um número negativo ou 0 (zero)')
 
+
+
     def remover(self, posicao:int)->any:
         try:
             if( self.estaVazia() ):
@@ -170,7 +179,8 @@ class Lista:
         except TypeError:
             raise ListaException(f'A posição deve ser um número inteiro')            
         except AssertionError:
-            raise ListaException(f'A posicao não pode ser um número negativo')  
+            raise ListaException(f'A posicao não pode ser um número negativo')
+      
               
     def __str__(self):
 
@@ -187,31 +197,6 @@ class Lista:
 
         str = str[:-2] + " ]"
         return str
-
-class Restaurante:
-    def __init__(self):
-        self.fila_pedidos = Fila()
-        self.cardapio = [
-            {"nome": "Spaghetti Carbonara", "descricao": "Massa com molho à base de ovos, queijo parmesão e bacon", "preco": 15.99},
-            {"nome": "Pizza Margherita", "descricao": "Pizza com molho de tomate, queijo mozzarella e manjericão fresco", "preco": 12.99},
-            {"nome": "Risoto de Funghi", "descricao": "Arroz arbóreo cozido com cogumelos funghi, creme de leite e queijo parmesão", "preco": 18.99},
-            {"nome": "Lasanha à Bolonhesa", "descricao": "Camadas de massa intercaladas com molho de carne à bolonhesa e queijo", "preco": 20.99},
-            {"nome": "Tiramisù", "descricao": "Sobremesa italiana à base de café, queijo mascarpone e cacau", "preco": 8.99},
-            {"nome": "Bruschetta", "descricao": "Fatias de pão italiano grelhado com tomate, azeite de oliva, alho e manjericão", "preco": 9.99},
-            {"nome": "Cannoli", "descricao": "Massa crocante recheada com creme de ricota e frutas cristalizadas", "preco": 7.99},
-            {"nome": "Ravioli de Ricota e Espinafre", "descricao": "Massa recheada com ricota e espinafre, servida com molho de tomate fresco", "preco": 16.99},
-            {"nome": "Gelato", "descricao": "Sorvete italiano em diversos sabores", "preco": 6.99},
-            {"nome": "Negroni", "descricao": "Coquetel italiano feito com gin, vermute e Campari", "preco": 10.99},
-            {"nome": "Limoncello", "descricao": "Licor italiano de limão", "preco": 8.99},
-            # Adicione mais itens ao cardápio conforme necessário
-        ]
-
-    def mostrar_cardapio(self):
-        print("Cardápio do Restaurante Italiano:")
-        for item in self.cardapio:
-            print(f"{item['nome']} - {item['descricao']} - R${item['preco']:.2f}")
-
-    # Restante do código...
 
 
 
