@@ -14,8 +14,14 @@
 
 ## Como usar
 1. Instale `Python 3` na sua máquina (caso não tenha).
-2. Baixe ou clone o projeto para o seu computador através do comando: git clone https://github.com/joanaeliseal/sistema-de-gerenciamento-python.git
-3. Abra o terminal ou prompt de comando e navegue até o diretório do projeto com o comando: cd sistema-de-gerenciamento-pedidos
+2. Baixe ou clone o projeto para o seu computador através do comando:
+   ```
+   git clone https://github.com/joanaeliseal/sistema-de-gerenciamento-python.git
+   ```
+3. Abra o terminal ou prompt de comando e navegue até o diretório do projeto com o comando:
+   ```
+   cd sistema-de-gerenciamento-pedidos
+   ```
 4. Inicie o programa executando o arquivo `main.py`.
 5. Siga as instruções no console para interagir com o sistema.
    
@@ -25,12 +31,13 @@
 ## Arquivos:
 | Nome | Descrição |
 | ------ | ----------- |
-| restaurante.py | Implementa um sistema simples de gerenciamento de pedidos de um restaurante italiano. Contém as classes: Prato, Menu e Restaurante |
+| boasvindas.py | Imprime na tela uma mensagem de boas vindas ao restaurante |
 | ListaSimplesmenteEncadeada.py | Implementa a estrutura de dados linear que armazena seus elementos em uma sequência. Cada elemento da lista é armazenado em um nó |
 | hash_table.py | Implementa a tabela de dispersão, que é um tipo de estrutura de dados que armazena pares chave/valor, onde a chave é usada para acessar o valor associado |
+| main.py | Inicializa o cliente e o servidor do programa |
+| restaurante.py | Implementa um sistema simples de gerenciamento de pedidos de um restaurante italiano. Contém as classes: Prato, Menu e Restaurante |
 | servidor.py | Servidor TCP que gerencia pedidos de um restaurante. O servidor aceita conexões de clientes, registra clientes novos, cadastra itens no cardápio e realiza pedidos |
 | cliente.py | O programa se conecta a um servidor, registra o cliente e, em seguida, permite que o cliente adicione itens ao pedido, verifique os itens disponíveis, veja os itens no pedido e entregue o pedido |
-| pratos.txt | Lista de pratos italianos, com seus respectivos nomes, descrições e preços. Cada prato é representado por uma tupla de três elementos: Nome, Descrição e Preço |
 | LICENCE | A MIT License concede permissão livre de custos a qualquer pessoa para usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender o software |
 
 
