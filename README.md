@@ -26,7 +26,7 @@
 | Nome | Descrição |
 | ------ | ----------- |
 | restaurante.py | Implementa um sistema simples de gerenciamento de pedidos de um restaurante italiano. Contém as classes: Prato, Menu e Restaurante |
-| lista.py | Implementa a estrutura de dados linear que armazena seus elementos em uma sequência. Cada elemento da lista é armazenado em um nó |
+| ListaSimplesmenteEncadeada.py | Implementa a estrutura de dados linear que armazena seus elementos em uma sequência. Cada elemento da lista é armazenado em um nó |
 | hash_table.py | Implementa a tabela de dispersão, que é um tipo de estrutura de dados que armazena pares chave/valor, onde a chave é usada para acessar o valor associado |
 | servidor.py | Servidor TCP que gerencia pedidos de um restaurante. O servidor aceita conexões de clientes, registra clientes novos, cadastra itens no cardápio e realiza pedidos |
 | cliente.py | O programa se conecta a um servidor, registra o cliente e, em seguida, permite que o cliente adicione itens ao pedido, verifique os itens disponíveis, veja os itens no pedido e entregue o pedido |
