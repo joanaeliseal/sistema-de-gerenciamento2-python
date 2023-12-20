@@ -32,7 +32,7 @@
 | Nome | Descrição |
 | ------ | ----------- |
 | boasvindas.py | Imprime na tela uma mensagem de boas vindas ao restaurante |
-| ListaSimplesmenteEncadeada.py | Implementa a estrutura de dados linear que armazena seus elementos em uma sequência. Cada elemento da lista é armazenado em um nó |
+| lista_simples_encadeada.py | Implementa a estrutura de dados linear que armazena seus elementos em uma sequência. Cada elemento da lista é armazenado em um nó |
 | hash_table.py | Implementa a tabela de dispersão, que é um tipo de estrutura de dados que armazena pares chave/valor, onde a chave é usada para acessar o valor associado |
 | main.py | Inicializa o cliente e o servidor do programa |
 | restaurante.py | Implementa um sistema simples de gerenciamento de pedidos de um restaurante italiano. Contém as classes: Prato, Menu e Restaurante |
