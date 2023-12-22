@@ -156,7 +156,6 @@ class Server:
                 return celular
             
     def exibir_cardapio(self, client_socket):
-        with self.__lock_pedidos:
             mensagem = '\n'.join(self.__restaurante.exibir_menu())
             client_socket.send(f"207-{mensagem}".encode())
            
