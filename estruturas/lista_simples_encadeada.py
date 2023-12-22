@@ -92,3 +92,23 @@ class ListaEncadeada:
         s += ''
         return s
 
+   
+    def representacao_nos(self):
+        # Método para retornar uma representação dos nós da lista encadeada
+        s = ''
+        cursor = self.__primeiro
+        while cursor is not None:
+            s += f'Cliente: {cursor.chave}, Pedido: {cursor.valor}\n'
+            cursor = cursor.proximo
+        return s
+ 
+
+    def representacao_no(self, chave=None):
+        # Método para retornar uma representação dos nós da lista encadeada
+        s = ''
+        cursor = self.__primeiro
+        while cursor is not None:
+            if chave is None or cursor.chave == chave:
+                s += f'Cliente: {cursor.chave}, Pedidos: {cursor.valor}\n'
+            cursor = cursor.proximo
+        return s
