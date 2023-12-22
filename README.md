@@ -4,9 +4,9 @@
 `Descrição` - Este é um sistema simples de gerenciamento de pedidos desenvolvido em Python. O objetivo principal é fornecer uma aplicação fácil de usar para gerenciar pedidos em um ambiente de negócios.
 
 ## Funcionalidades
-1. Cardápio do restaurante: possui detalhes com nome, descrição e preço.
+1. Cardápio do restaurante: possui detalhes com nome e descrição.
 2. Realização de Pedidos: Crie novos pedidos, associando clientes e pratos.
-3. Consulta de Pedidos: Visualize pedidos em processamento, realizados ou sem estoque e obtenha informações detalhadas sobre cada transação.
+3. Consulta de Pedidos: Visualiza os pedidos realizados.
 
 ## Requisitos
 + [Python 3](https://docs.python.org/3/index.html)
@@ -35,8 +35,7 @@
 | lista_simples_encadeada.py | Implementa a estrutura de dados linear que armazena seus elementos em uma sequência. Cada elemento da lista é armazenado em um nó |
 | hash_table.py | Implementa a tabela de dispersão, que é um tipo de estrutura de dados que armazena pares chave/valor, onde a chave é usada para acessar o valor associado |
 | main.py | Inicializa o cliente e o servidor do programa |
-| restaurante.py | Implementa um sistema simples de gerenciamento de pedidos de um restaurante italiano. Contém as classes: Prato, Menu e Restaurante |
-| servidor.py | Servidor TCP que gerencia pedidos de um restaurante. O servidor aceita conexões de clientes, registra clientes novos, cadastra itens no cardápio e realiza pedidos |
+| servidor.py | Servidor TCP que gerencia pedidos de um restaurante. O servidor aceita conexões de clientes, registra clientes novos, cadastra itens no cardápio, realiza pedidos e implementa um sistema simples de gerenciamento de pedidos de um restaurante italiano. Contém as classes: Prato, Menu e Restaurante |
 | cliente.py | O programa se conecta a um servidor, registra o cliente e, em seguida, permite que o cliente adicione itens ao pedido, verifique os itens disponíveis, veja os itens no pedido e entregue o pedido |
 | LICENCE | A MIT License concede permissão livre de custos a qualquer pessoa para usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender o software |
 
